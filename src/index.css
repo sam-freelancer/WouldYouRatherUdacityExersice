@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(0, 0, 0, 0.05);
+}
+
+hr {
+  margin: 0;
+}
+
+select {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #252525;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 90%;
+  margin: 100px auto .5rem auto;
+  font-size: .9rem;
+  justify-content: center;
+  
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
+.nav {
+  display: flex;
+  width: 90%;
+  margin: .5rem auto;
+  text-decoration: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.nav ul {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.nav li {
+  padding: 0rem 1rem;
+  text-decoration: none;
+}
+
+.login-logout {
+  margin: .4em 0em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.welcome-message {
+  color: #444;
+  padding: 0rem 1rem;
+}
+
+.logout-btn {
+  justify-content: flex-start;
+  margin: 0rem 1rem;
+  background-color: lightblue;
+  box-shadow: 0 10px 40px -10px rgba(0,64,128,.4);
+}
+
+.logout-btn:hover {
+  box-shadow: none;
+  transition-duration: .2s;
+}
+
+@media only screen and (max-width: 700px) {
+  .welcome-message {
+    display: none;
+  }
+}
+
+.active-nav {
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: all .2s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transition: .15s ease-in-out;
+}
+
+.login {
+  height: 100vh;
+  
+}
+
+.login-container {
+  width: 90%;
+  max-width: 35rem;
+  margin: auto auto;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(78, 78, 78);
+  border-radius: .25rem;
+  box-shadow: 5px 5px 5px #f1e8e8;
+}
+
+.login-header {
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+}
+
+.login-header h3 {
+  margin: 0;
+  padding: .7rem 1rem;
+  font-stretch: expanded;
+}
+
+.login-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-body p {
+  padding: .7rem 1rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form select {
+  margin: 0rem 0.7rem 0.7rem;
+}
+
+.login-btn {
+  width: 50%;
+  margin: .7rem auto;
+  background-color: white;
+  border-color: lightblue;
+}
+
+.login-btn:hover {
+  background-color: lightblue;
+}
+
+.dashboard-container {
+  width: 70%;
+  /* max-width: 40rem; */
+  margin: 1rem auto;
+}
+
+.dashboard-container h1 {
+  margin-top: 0;
+}
+
+.question-controls {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.question-type-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: .5rem;
+  text-align: center;
+  background-color: #46da08;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.active-btn {
+  background-color: #efefef;
+  border: 1px solid #666;
+  font-weight: 700;
+}
+
+#unanswered-q-btn {
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+#answered-q-btn {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+.questions {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.panel {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 40px -10px rgba(0,64,128,.2);
+}
+
+.avatar {
+  height: 50px;
+  border-radius: .5rem;
+  padding: .5rem;
+}
+
+.avatar-large {
+  height: 100px;
+}
+
+.panel-header {
+  display: flex;
+  width: 100%;
+  background-color: rgb(241, 234, 234);
+  align-items: center;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.panel-header p {
+  margin: 0;
+}
+
+.panel-user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.panel-time-info {
+  padding: 0rem 1rem;
+  color: #555;
+}
+
+.panel-body {
+  display: flex;
+  flex-direction: column;
+  padding: .7rem;
+  background-color: white;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.would-you-rather {
+  margin: 1rem 0rem;
+  text-align: center;
+  color: #444;
+}
+
+.would-you-rather-detailed {
+  margin: 1rem 0rem;
+  text-align: center;
+  color: #444;
+  font-size: 1.4rem;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 1rem 0rem;
+}
+
+.option {
+  width: 42.5%;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  padding: 1rem;
+  align-items: center;
+}
+.option-1 {
+  background-color: rgba(214, 218, 3, 0.9);
+}
+
+.option-2 {
+  background-color: rgb(148, 196, 255, .9);
+}
+
+.option-not-voted {
+  background-color: #ddd;
+  opacity: 0.6;
+}
+
+.detailed-option {
+  font-size: 1.2rem;
+  box-shadow: 0 10px 40px -10px rgba(0,64,128,.4);
+  transition-duration: .2s;
+  cursor: pointer;
+}
+
+.detailed-option:hover {
+  box-shadow: none;
+  transition-duration: .2s;
+}
+
+#option-1-detailed {
+  background-color: rgb(255, 153, 148, .9);
+}
+
+#option-2-detailed {
+  background-color: rgb(148, 196, 255, .9);
+}
+
+.option-divider {
+  width: 15%;
+  margin: auto auto;
+  color: #444;
+}
+
+.results {
+  padding: .5rem;
+  margin: 1rem;
+}
+
+.option-results {
+  width: 40%;
+}
+
+.option-votes {
+  width: 60%;
+}
+
+.percent-bar {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+  background-color: #6BB9F0;
+  margin-bottom: .5rem;
+}
+
+.percent-text-label {
+  font-size: 90%;
+  padding-left: .4rem;
+}
+
+.option-voted {
+  border: 1px solid green;
+  background-color: lightgreen;
+}
+
+.vote-details {
+  color: #aaa;
+}
+
+.view-poll-btn {
+  width: 40%;
+  margin: 1rem auto;
+  border: 2px solid lightblue;
+  background-color: rgb(0, 0, 0, 0.08);
+  box-shadow: 0 10px 40px -10px rgba(0,64,128,.4);
+}
+
+.view-poll-btn:hover {
+  background-color: lightblue;
+  box-shadow: none;
+  transition-duration: .2s;
+}
+
+.link-btn {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.teal-panel {
+  background-color: rgb(228, 213, 24)
+}
+
+.header-title {
+  margin: 1rem auto;
+  font-size: 1.4rem;
+}
+
+.create-question-sep {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.question-input {
+  display: block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border-color: #ccc;
+  border-radius: .25rem;
+}
+
+.new-question-btn {
+  width: 40%;
+  margin: 1rem auto;
+  background-color: rgb(250, 190, 88, .8);
+  box-shadow: 0 10px 40px -10px rgba(0,64,128,.4);
+}
+
+.new-question-btn:hover {
+  box-shadow: none;
+  transition-duration: .2s;
+}
+
+.user-rank {
+  margin: 1rem;
+}
+
+.panel-title {
+  margin-left: 1rem;
+}
+
+.leader-panel {
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar-container {
+  width: 25%;
+}
+
+.leader-total {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+}
+
+.question-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #444;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.score-circle {
+  padding: .5rem 1.5rem .5rem 1.5rem;
+}
+
+.score {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .score-circle {
+    padding: .25rem .75rem .25rem .75rem;
+  }
+}

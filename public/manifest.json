@@ -1,0 +1,8 @@
+{
+  "short_name": "Would You Rather",
+  "name": "Would You Rather",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
